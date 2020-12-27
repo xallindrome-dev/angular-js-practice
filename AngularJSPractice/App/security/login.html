@@ -1,0 +1,11 @@
+﻿<h2 ng-hide="$ctrl.loggedIn">Please Login</h2>
+<h2 ng-show="$ctrl.loggedIn">You have already logged in.</h2>
+
+<div ng-hide="$ctrl.loggedIn">
+    <button class="btn btn-primary" ng-click="$ctrl.fbLogin()">Login with Facebook</button>
+
+    <button class="btn btn-primary" ng-click="$ctrl.anonLogin()">Anonymous</button>
+</div>
+
+<br/>
+<div class="alert alert-danger" ng-show="!!$ctrl.errorMessage">{{errorMessage}}</div>

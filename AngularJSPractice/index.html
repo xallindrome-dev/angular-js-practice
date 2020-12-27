@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title>Expense</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+</head>
+<body class="container">
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1738390406445172',
+                xfbml: true,
+                version: 'v2.6'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <ng-view></ng-view>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/firebase.js"></script>
+    <script src="Scripts/angularfire.min.js"></script>
+    <script src="App/app.js"></script>
+    <script src="App/home/home.js"></script>
+    <script src="App/fbUrl.js"></script>
+    <script src="App/security/auth.js"></script>
+    <script src="App/security/login.js"></script>
+    <script src="App/security/logout.js"></script>
+    <script src="App/nav/nav.js"></script>
+    <script src="App/fbRef.js"></script>
+    <script src="App/userPreferences/editUserPref.js"></script>
+    <script src="App/categories/categoryList.js"></script>
+    <script src="App/expenses/expenseListDisplay.js"></script>
+    <script src="App/expenses/expenseList.js"></script>
+    <script src="App/expenses/editExpense.js"></script>
+</body>
+</html>

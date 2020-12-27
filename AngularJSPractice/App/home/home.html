@@ -1,0 +1,10 @@
+﻿<nav></nav>
+<h1>Expenses <small>{{$ctrl.expensesInOrder.getTotal() | currency}}</small></h1>
+
+<expense-list-display expense-data="$ctrl.expensesInOrder"
+                      select-expense="$ctrl.editExpense(expense)"></expense-list-display>
+
+<edit-expense categories="$ctrl.categories"
+              edited-expense="$ctrl.editedExpense"
+              update-expense="$ctrl.updateExpense()"
+              create-new-expense="$ctrl.createExpense(expenseData)"></edit-expense>
